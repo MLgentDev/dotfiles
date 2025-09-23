@@ -1,8 +1,8 @@
-# %APPDATA%\alacritty\alacritty.toml
+# %APPDATA%/alacritty/alacritty.toml
 
 [general]
 import = [
-  "%APPDATA%\alacritty\alacritty-base.toml"
+  "./alacritty-base.toml"
 ]
 
 [terminal]

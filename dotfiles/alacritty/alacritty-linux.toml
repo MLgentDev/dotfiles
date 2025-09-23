@@ -2,7 +2,7 @@
 
 [general]
 import = [
-  "~/.config/alacritty/alacritty-base.toml"
+  "./alacritty-base.toml"
 ]
 
 [terminal]
