@@ -6,4 +6,4 @@ import = [
 ]
 
 [terminal]
-shell = { program = "wsl", args = [] }
+shell = { program = "wsl", args = [ "--cd", "~", "zsh", "-l" ] }
