@@ -1,0 +1,9 @@
+# ~/.config/alacritty/alacritty.toml
+
+[general]
+import = [
+  "~/.config/alacritty/alacritty-base.toml"
+]
+
+[terminal]
+shell = { program = "/bin/zsh", args = ["-l"] }

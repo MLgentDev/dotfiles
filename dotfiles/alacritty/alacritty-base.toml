@@ -1,0 +1,11 @@
+# ~/.config/alacritty/alacritty-base.toml
+# # %APPDATA%\alacritty\alacritty-base.toml
+
+[window]
+decorations = "Buttonless"
+opacity = 0.95
+startup_mode="Maximized"
+
+[font]
+size = 16.0
+

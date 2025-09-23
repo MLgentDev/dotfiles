@@ -1,0 +1,9 @@
+# %APPDATA%\alacritty\alacritty.toml
+
+[general]
+import = [
+  "%APPDATA%\alacritty\alacritty-base.toml"
+]
+
+[terminal]
+shell = { program = "wsl", args = [] }
