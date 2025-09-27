@@ -2,6 +2,26 @@
 
 ## Cross-platform terminal stack
 
+### Hack Nerd Font
+> Iconic font aggregator, collection, and patcher
+
+* https://www.nerdfonts.com/
+
+Windows
+* Download Hack.zip from the [Nerd Fonts releases page](https://github.com/ryanoasis/nerd-fonts/releases)
+* Extract the .ttf files.
+* Select them all, right-click → Install for all users.
+
+Ubuntu/WSL
+```shell
+cd ~/Downloads
+wget -qO hack.zip https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Hack.zip
+mkdir -p ~/.local/share/fonts
+unzip hack.zip -d ~/.local/share/fonts
+fc-cache -fv
+rm hack.zip
+```
+
 ### zsh
 > The Z shell (Zsh) is a Unix shell that can be used as an interactive login shell and as a command interpreter for shell scripting.
 
