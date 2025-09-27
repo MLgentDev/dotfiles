@@ -36,7 +36,7 @@ Windows
 * https://github.com/alacritty/alacritty/releases
 
 
-### Zellij
+### zellij
 > A terminal workspace with batteries included.
 
 * https://zellij.dev/
@@ -45,9 +45,23 @@ Windows
 Ubuntu/WSL
 ```shell
 cd ~/Downloads
-wget https://github.com/zellij-org/zellij/releases/download/v0.43.1/zellij-x86_64-unknown-linux-musl.tar.gz
-tar -xvf zellij-x86_64-unknown-linux-musl.tar.gz
+wget -qO zellij.tar.gz https://github.com/zellij-org/zellij/releases/download/v0.43.1/zellij-x86_64-unknown-linux-musl.tar.gz
+tar -xvf zellij.tar.gz
 sudo mv zellij /usr/local/bin/
-rm zellij-x86_64-unknown-linux-musl.tar.gz
+rm zellij.tar.gz
 ```
 
+### yazi
+> Blazing fast terminal file manager written in Rust, based on async I/O.
+
+* https://yazi-rs.github.io/
+* https://github.com/sxyazi/yazi
+
+Ubuntu/WSL
+```shell
+cd ~/Downloads
+wget -qO yazi.zip https://github.com/sxyazi/yazi/releases/download/v25.5.31/yazi-x86_64-unknown-linux-gnu.zip
+unzip -q yazi.zip -d yazi-temp
+sudo mv yazi-temp/*/{yazi,ya} /usr/local/bin/
+rm -rf yazi-temp yazi.zip
+```
