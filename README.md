@@ -34,3 +34,20 @@ sudo snap install alacritty --classic
 ```
 Windows
 * https://github.com/alacritty/alacritty/releases
+
+
+### Zellij
+> A terminal workspace with batteries included.
+
+* https://zellij.dev/
+* https://github.com/zellij-org/zellij
+
+Ubuntu/WSL
+```shell
+cd ~/Downloads
+wget https://github.com/zellij-org/zellij/releases/download/v0.43.1/zellij-x86_64-unknown-linux-musl.tar.gz
+tar -xvf zellij-x86_64-unknown-linux-musl.tar.gz
+sudo mv zellij /usr/local/bin/
+rm zellij-x86_64-unknown-linux-musl.tar.gz
+```
+
