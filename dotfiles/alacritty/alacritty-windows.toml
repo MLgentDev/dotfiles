@@ -6,4 +6,4 @@ import = [
 ]
 
 [terminal]
-shell = { program = "wsl", args = [ "--cd", "~", "zsh", "-l" ] }
+shell = { program = "wsl", args = [ "--cd", "~", "zsh", "-lc", "/usr/local/bin/zellij" ] }
