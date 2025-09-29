@@ -46,6 +46,9 @@ if [ -d "${HOME}/.local/share/fnm" ]; then
   eval "$(fnm env)"
 fi
 
+# Load nvm (Node Version Manager) if installed
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" 
 
 # Zellij integration
 if [[ -n $ZELLIJ ]]; then
