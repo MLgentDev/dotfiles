@@ -101,3 +101,15 @@ curl -sS https://starship.rs/install.sh | sh
 ```shell
 starship preset nerd-font-symbols -o ~/.config/starship.toml
 ```
+
+### neovim
+> Vim-fork focused on extensibility and usability
+
+* https://neovim.io/
+* https://github.com/neovim/neovim
+
+Ubuntu/WSL
+```shell
+sudo snap install nvim --classic
+```
+
