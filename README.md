@@ -85,3 +85,19 @@ unzip -q yazi.zip -d yazi-temp
 sudo mv yazi-temp/*/{yazi,ya} /usr/local/bin/
 rm -rf yazi-temp yazi.zip
 ```
+
+### starship
+> The minimal, blazing-fast, and infinitely customizable prompt for any shell!
+
+* https://starship.rs/
+* https://github.com/starship/starship
+* https://starship.rs/presets/nerd-font
+
+Ubuntu/WSL
+```shell
+curl -sS https://starship.rs/install.sh | sh
+```
+
+```shell
+starship preset nerd-font-symbols -o ~/.config/starship.toml
+```

@@ -1,8 +1,7 @@
 # Set up the prompt
-
-autoload -Uz promptinit
-promptinit
-prompt adam1
+# autoload -Uz promptinit
+# promptinit
+# prompt adam1
 
 setopt histignorealldups sharehistory
 
@@ -64,4 +63,7 @@ if [[ -n $ZELLIJ ]]; then
   # Set once at startup so the first prompt already has the right title
   _zj_pane_update
 fi
+
+# Starship prompt
+eval "$(starship init zsh)"
 
