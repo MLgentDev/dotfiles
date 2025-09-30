@@ -40,6 +40,19 @@ which zsh
 chsh -s $(which zsh)
 ```
 
+# zsh extensions
+* https://github.com/zdharma-continuum/zinit
+```shell
+bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
+```
+
+### modern CLI tools
+* https://github.com/junegunn/fzf
+
+```shell
+sudo apt install fzf
+```
+
 ### alacritty
 > A cross-platform, OpenGL terminal emulator.
 
