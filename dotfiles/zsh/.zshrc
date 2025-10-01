@@ -95,6 +95,12 @@ if command -v dotnet >/dev/null 2>&1; then
   compdef _dotnet_zsh_complete dotnet
 fi
 
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias gflash='gemini -m gemini-2.5-flash'
+alias gpro='gemini -m gemini-2.5-pro'
+
 ### Zinit (Zsh plugin manager)
 if [[ -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
   source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
