@@ -74,6 +74,27 @@ if command -v just >/dev/null 2>&1; then
   eval "$(just --completions zsh)"
 fi
 
+# dotnet
+if command -v dotnet >/dev/null 2>&1; then
+  # zsh parameter completion for the dotnet CLI
+  _dotnet_zsh_complete()
+  {
+    local completions=("$(dotnet complete "$words")")
+
+    # If the completion list is empty, just continue with filename selection
+    if [ -z "$completions" ]
+    then
+      _arguments '*::arguments: _normal'
+      return
+    fi
+
+    # This is not a variable assignment, don't remove spaces!
+    _values = "${(ps:\n:)completions}"
+  }
+
+  compdef _dotnet_zsh_complete dotnet
+fi
+
 ### Zinit (Zsh plugin manager)
 if [[ -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
   source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
