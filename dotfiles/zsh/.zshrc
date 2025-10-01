@@ -61,6 +61,19 @@ if command -v fzf >/dev/null 2>&1; then
   eval "$(fzf --zsh)"
 fi
 
+# uv
+if command -v uv >/dev/null 2>&1; then
+  eval "$(uv generate-shell-completion zsh)"
+fi
+if command -v uvx >/dev/null 2>&1; then
+  eval "$(uvx --generate-shell-completion zsh)"
+fi
+
+# just
+if command -v just >/dev/null 2>&1; then
+  eval "$(just --completions zsh)"
+fi
+
 ### Zinit (Zsh plugin manager)
 if [[ -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
   source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
