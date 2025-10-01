@@ -16,6 +16,15 @@ HISTFILE=~/.zsh_history
 # Set Zsh as the default shell
 export SHELL=/bin/zsh
 
+BREW_PATH="/home/linuxbrew/.linuxbrew/bin/brew"
+if [[ -x "$BREW_PATH" ]]; then
+  eval "$($BREW_PATH shellenv)"
+fi
+
+if command -v zoxide >/dev/null 2>&1; then
+  eval "$(zoxide init zsh)"
+fi
+
 # Load fnm (Fast Node Manager) if installed
 FNM_PATH="${HOME}/.local/share/fnm"
 if [ -d "${HOME}/.local/share/fnm" ]; then
@@ -43,7 +52,14 @@ if [[ -n $ZELLIJ ]]; then
 fi
 
 # Starship prompt
-eval "$(starship init zsh)"
+if command -v starship >/dev/null 2>&1; then
+  eval "$(starship init zsh)"
+fi
+
+# fzf
+if command -v fzf >/dev/null 2>&1; then
+  eval "$(fzf --zsh)"
+fi
 
 ### Zinit (Zsh plugin manager)
 if [[ -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
@@ -105,3 +121,4 @@ zstyle ':completion:*' use-compctl false
 # Extra: nicer `kill` menu coloring
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+

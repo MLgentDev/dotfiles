@@ -40,17 +40,108 @@ which zsh
 chsh -s $(which zsh)
 ```
 
-# zsh extensions
+```shell
+rm -f ~/.zcompdump
+```
+
+### zsh extensions
 * https://github.com/zdharma-continuum/zinit
 ```shell
 bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
 ```
 
+### homebrew
+> The missing package manager for macOS (or Linux)
+* https://brew.sh/
+* https://docs.brew.sh/Shell-Completion
+
+```shell
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+
 ### modern CLI tools
+
+#### fzf
+> 
+
 * https://github.com/junegunn/fzf
 
 ```shell
-sudo apt install fzf
+brew install fzf
+```
+
+#### fd
+> fzf is a general-purpose command-line fuzzy finder.
+
+* https://github.com/sharkdp/fd
+
+```shell
+brew install fd
+```
+
+#### jq
+> Command-line JSON processor
+
+* https://jqlang.org/
+* https://github.com/jqlang/jq
+
+```shell
+brew install jq
+```
+
+#### ripgrep/rg
+> ripgrep recursively searches directories for a regex pattern while respecting your gitignore
+
+* https://github.com/BurntSushi/ripgrep
+
+```shell
+brew install ripgrep
+```
+
+#### zoxide
+> A smarter cd command. Supports all major shells.
+
+* https://github.com/ajeetdsouza/zoxide
+
+```shell
+brew install zoxide
+```
+
+#### resvg
+> An SVG rendering library.
+
+* https://github.com/linebender/resvg
+
+```shell
+brew install resvg
+```
+
+#### poppler
+> Poppler is a PDF rendering library based on the xpdf-3.0 code base. 
+
+* https://poppler.freedesktop.org/
+
+```shell
+brew install poppler
+```
+
+#### 7-zip
+> is a file archiver with a high compression ratio.
+
+* https://www.7-zip.org/
+
+```shell
+sudo apt install 7zip
+```
+
+#### bat
+* A cat(1) clone with wings. 
+
+* https://github.com/sharkdp/bat
+
+```shell
+brew install bat
 ```
 
 ### alacritty
